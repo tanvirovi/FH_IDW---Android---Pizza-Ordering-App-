@@ -6,41 +6,18 @@
     android:layout_height="match_parent"
     tools:context="pizzastuff.ed.kiel.pizzaordering.MainActivity">'
 
-    <LinearLayout
-        android:id="@+id/orderLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/ic_launcher_background"
-        android:clickable="false"
-        android:orientation="vertical"
-        android:padding="30dp"
-        android:visibility="invisible">
 
-        <TextView
-            android:id="@+id/oderText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <Button
-            android:id="@+id/orderButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="orderAgain"
-            android:text="Order Again" />
-    </LinearLayout>
 
     <ScrollView
+        android:id="@+id/sView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray">
 
         <RelativeLayout
             android:id="@+id/scroleRelative"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="visible">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/lable_1"
@@ -74,14 +51,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Crust thin" />
+                    android:text="Thin Crust" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Crust" />
+                    android:text="Soft Crust" />
             </RadioGroup>
 
             <TextView
@@ -107,8 +84,6 @@
                     android:id="@+id/checkBox_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/linearLayout"
                     android:text="Onions" />
 
                 <CheckBox
@@ -164,5 +139,29 @@
 
         </RelativeLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/orderLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/oderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/orderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Again" />
+    </LinearLayout>
 
 </RelativeLayout>

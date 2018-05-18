@@ -17,7 +17,7 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity{
 
-    private Button button_1;
+    private Button button_1, button_2;
     private RadioGroup radioGroup;
     private RadioButton radioButton1, radioButton2, radioButton3;
     private CheckBox checkBox_1,checkBox_2,checkBox_3;
@@ -31,7 +31,10 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         button_1 = (Button)findViewById(R.id.button_1);
+        button_2 = (Button)findViewById(R.id.orderButton);
+
         radioGroup = (RadioGroup)findViewById(R.id.radioGroup);
         radioButton1 = (RadioButton)findViewById(R.id.radioButton1);
         radioButton2 = (RadioButton)findViewById(R.id.radioButton2);
@@ -85,7 +88,17 @@ public class MainActivity extends AppCompatActivity{
                 relativeLayout.setVisibility(View.INVISIBLE);
             }
         });
+
+        button_2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                clickAble = true;
+
+                RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.scroleRelative);
+                relativeLayout.setVisibility(View.VISIBLE);
+                LinearLayout layout = (LinearLayout) findViewById(R.id.orderLayout);
+                layout.setVisibility(View.INVISIBLE);
+
+            }
+        });
     }
-
-
 }
