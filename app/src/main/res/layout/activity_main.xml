@@ -7,17 +7,16 @@
     tools:context="pizzastuff.ed.kiel.pizzaordering.MainActivity">'
 
 
-
     <ScrollView
         android:id="@+id/sView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@android:color/darker_gray">
 
         <RelativeLayout
             android:id="@+id/scroleRelative"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/lable_1"
@@ -128,6 +127,14 @@
                 android:layout_marginTop="22dp"
                 android:ems="10"
                 android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/myToggleButton"
+                android:text="Please enter your Email address" />
 
             <Button
                 android:id="@+id/button_1"
